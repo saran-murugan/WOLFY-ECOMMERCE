@@ -1,0 +1,133 @@
+.hero{
+    height: 95vh;
+    background-image: linear-gradient(180deg, #F5F5DC, #e1ffea22 60%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    margin-top: -3rem;
+}
+
+.hero-left h2{
+    font-weight: 600;
+}
+.hero-left p{
+    font-size: 5rem;
+    font-weight: 600;
+    color: rgb(44, 43, 43);
+    line-height: 6.5rem;
+    text-shadow: 2px 4px 4px rgba(0,0,0,0.2), 0px -5px 10px rgba(255,255,255,0.15);
+}
+.hero-left .hero-latest-btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2rem;
+    border: 1px solid #ff4141;
+    width:210px;
+    padding: 10px 5px 10px 20px;
+    border-radius: 30px;
+    background-color: #ff4141;
+    color: aliceblue;
+    margin: 30px 0px 0 20px;
+    cursor: pointer;
+}
+
+.hero-right img{
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.2));
+    margin: 0 -10rem 0 0;
+    width: 550px;
+    height: 550px;
+}
+
+@media (max-width: 1280px) {
+    .hero-left p {
+        font-size: 4.5rem;
+        line-height: 6rem;
+    }
+
+    .hero-right img {
+        margin: 0 -8rem 0 0;
+    }
+}
+
+/* Styles for screens with a max-width of 1024px */
+@media (max-width: 1024px) {
+    .hero-left p {
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+
+    .hero-left .hero-latest-btn {
+        width: 190px;
+        font-size: 1.1rem;
+    }
+
+    .hero-right img {
+        margin: 0 -6rem 0 0;
+    }
+}
+
+/* Styles for screens with a max-width of 800px */
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-left {
+        margin-top: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-left p {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-left .hero-latest-btn {
+        width: 180px;
+        font-size: 1rem;
+        padding: 8px 4px 8px 12px;
+    }
+
+    .hero-right img {
+        margin: 30px 0 0 0;
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+/* Styles for screens with a max-width of 500px */
+@media (max-width: 500px) {
+    .hero-left h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-left p {
+        font-size: 2.3rem;
+        line-height: 3.4rem;
+    }
+
+    .hero-left .hero-latest-btn {
+        width: 160px;
+        font-size: 0.9rem;
+        padding: 8px 5px 8px 12px;
+        margin: 20px auto;
+    }
+
+    .hero-right img {
+        margin: 50px 0 40px 0;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}

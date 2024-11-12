@@ -1,0 +1,145 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.footer-logo{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-logo p{
+    color: #383838;
+    font-size: 46px;
+    font-weight: 700;
+}
+.footer-links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    color: #252525;
+    font-size: 20px;
+}
+.footer-social-icon{
+    display:flex;
+    gap:40px;
+    margin-top: -1rem;
+    cursor: pointer;
+}
+.footer-copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    font-size: 20px;
+}
+.footer-copyright hr{
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    background: #c7c7c7;
+}
+
+
+/* Responsive styles for screens with max-width of 1280px */
+@media (max-width: 1280px) {
+    .footer-logo p {
+        font-size: 40px;
+    }
+
+    .footer-links {
+        gap: 30px;
+        font-size: 18px;
+    }
+
+    .footer-social-icon {
+        gap: 35px;
+    }
+}
+
+/* Responsive styles for screens with max-width of 1024px */
+@media (max-width: 1024px) {
+    .footer-logo p {
+        font-size: 36px;
+    }
+
+    .footer-links {
+        gap: 25px;
+        font-size: 18px;
+    }
+
+    .footer-social-icon {
+        gap: 30px;
+    }
+
+    .footer-copyright {
+        font-size: 18px;
+        gap: 25px;
+    }
+}
+
+/* Responsive styles for screens with max-width of 800px */
+@media (max-width: 800px) {
+    .footer-logo p {
+        font-size: 32px;
+    }
+
+    .footer-links {
+        gap: 20px;
+        font-size: 16px;
+        flex-wrap: wrap; /* Allow wrapping if space is insufficient */
+    }
+
+    .footer-social-icon {
+        gap: 20px;
+    }
+
+    .footer-copyright {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .footer-copyright hr {
+        width: 90%;
+    }
+}
+
+/* Responsive styles for screens with max-width of 500px */
+@media (max-width: 500px) {
+    .footer{
+        margin-top: -4rem;
+    }
+    .footer-logo{
+        margin-bottom: -1rem;
+    }
+    .footer-logo p {
+        font-size: 28px;
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 12px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer-social-icon {
+        gap: 20px;
+        margin:0 0 -1rem 0;
+    }
+
+    .footer-copyright {
+        font-size: 14px;
+        gap: 15px;
+    }
+
+    .footer-copyright hr {
+        width: 100%;
+    }
+}
