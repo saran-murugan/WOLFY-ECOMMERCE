@@ -17,13 +17,13 @@ const ShopContextProvider = (props) =>{
     const[allProducts,setAllProducts] =useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://wolfy-ecommerce.onrender.com/allproducts')
         .then((res)=>res.json())
         .then((data)=>setAllProducts(data));
 
         //for getcart from auth token when logged in
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart',{
+            fetch('https://wolfy-ecommerce.onrender.com/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -38,7 +38,7 @@ const ShopContextProvider = (props) =>{
     const addToCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/addtocart',{
+            fetch('https://wolfy-ecommerce.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/formData',
@@ -54,7 +54,7 @@ const ShopContextProvider = (props) =>{
     const removeFromCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('https://wolfy-ecommerce.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/formData',
