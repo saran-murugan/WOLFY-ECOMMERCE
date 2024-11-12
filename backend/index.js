@@ -37,6 +37,7 @@ const upload = multer({storage:storage});
 
 //Creating upload Endpoint for images
 
+
 app.use('/images',express.static('upload/images'))
 app.post("/upload", upload.single('product'), (req,res) =>{
     res.json({
@@ -98,11 +99,20 @@ app.post("/addproduct", async (req,res) => {
         id= 1;
     }
 
+    // Make sure to use the image URL from the request body
+    const productImageUrl = req.body.image;  // Use the image URL from the request
+
+    // Validate if image URL is provided
+    if (!productImageUrl) {
+        return res.status(400).json({ success: false, error: "Image URL is required" });
+    }
+
+
     const product = new Product({
         id: id,
         name: req.body.name,
         category:req.body.category,
-        image:req.body.image,
+        image:productImageUrl,
         new_price:req.body.new_price,
         old_price:req.body.old_price,
     })
